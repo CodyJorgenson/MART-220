@@ -59,37 +59,3 @@ function drawRect(){
 
     }
 }
-
-
-
-
-
-/*
-var x = 100;
-var y = 100;
-var rColor = ['red', 'blue', 'violet', 'yellow', 'orange', 'pink', 'purple', 'limegreen', 'crimson', 'maroon'];
- 
-
-function setup() {
-    function setup() {
-        fill(rColor);
-        createCanvas(600,500);
-      }
-    function draw() {
-        fill(230);
-
-        ellipse(300,250,400,400);
-
-        fill(0,100,0);
-        rect(210,250,200,200);
-
-        ellipse(x,y,50)
-        fill(250,0,0);
-    
-        }
-    function mouseMoved() {
-        x = mouseX;
-        y = mouseY;
-        }
-}
-*/
