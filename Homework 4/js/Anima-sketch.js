@@ -71,7 +71,7 @@ function preload()
         ninja = new character(animations, 100,100);
         for(var i = 0; i < 5; i++)
         {
-            Jelly[i] = new JellyArray(random(10,1400), random(10,700));
+            JellyArray[0] = new JellyArray(random(10,1400), random(10,700));
         }
         
         setInterval(incrementIndex, 50);
@@ -81,12 +81,12 @@ function preload()
     {
         background(120);
         image(animations[i], ninjaObj[i].getX(), ninjaObj[i].getY());
-    
+    /*
         for(var i = 0; i < Jelly.length; i++)
         {
-            Jelly[i].draw();
+            Jelly[0].draw();
         }
-        
+        */
       console.log();
       //image(img1, random(10, 1330), random(10, 650));
     }
@@ -100,4 +100,3 @@ function preload()
          i = 0;
      }
     }
-
