@@ -62,7 +62,7 @@ function preload()
             animations[i] = ninjaObj[i].getImage();
         }
         console.log();
-        //img1 = loadImage("assets/Jelly (1).png");
+        img1 = loadImage("assets/Jelly (1).png");
     }
 
     function setup() 
@@ -88,7 +88,7 @@ function preload()
         }
         */
       console.log();
-      //image(img1, random(10, 1330), random(10, 650));
+      image(img1, random(10, 1330), random(10, 650));
     }
 
     function incrementIndex()
