@@ -51,17 +51,18 @@ function preload()
         ninja = new animationWalk("assets/Run__009.png", 0, 0);
         ninjaObj[9] = ninja;
 
-        jelly = new myJelly("assets/Jelly (1).png", 100, 100);
+        jelly = new JellyArray("assets/Jelly (1).png", 100, 100);
         Jelly[0] = jelly;
-        jelly = new myJelly("assets/Jelly (2).png", 100, 100);
+        jelly = new JellyArray("assets/Jelly (2).png", 100, 100);
         Jelly[1] = jelly;
-        jelly = new myJelly("assets/Jelly (3).png", 100, 100);
+        jelly = new JellyArray("assets/Jelly (3).png", 100, 100);
         Jelly[2] = jelly;
 
         for (var i = 0; i < ninjaObj.length; i++) {
             animations[i] = ninjaObj[i].getImage();
         }
         console.log();
+        //img1 = loadImage("assets/Jelly (1).png");
     }
 
     function setup() 
@@ -70,7 +71,7 @@ function preload()
         ninja = new character(animations, 100,100);
         for(var i = 0; i < 5; i++)
         {
-            myJelly[i] = new myJelly(random(10,1400), random(10,700));
+            Jelly[i] = new JellyArray(random(10,1400), random(10,700));
         }
         
         setInterval(incrementIndex, 50);
@@ -80,13 +81,14 @@ function preload()
     {
         background(120);
         image(animations[i], ninjaObj[i].getX(), ninjaObj[i].getY());
-        /*
-        for(var i = 0; i < myJelly.length; i++)
+    
+        for(var i = 0; i < Jelly.length; i++)
         {
-            myJelly[i].draw();
+            Jelly[i].draw();
         }
-        */
+        
       console.log();
+      //image(img1, random(10, 1330), random(10, 650));
     }
 
     function incrementIndex()
