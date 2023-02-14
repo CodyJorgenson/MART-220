@@ -44,10 +44,10 @@ class animationWalk{
         return this.y;
     }
 }
-class myJelly{
-    constructor(path3, x, y)
+class JellyArray{
+    constructor(path, x, y)
     {
-        this.path3 = path3;
+        this.path = path;
         this.x = x;
         this.y = y;
     }
