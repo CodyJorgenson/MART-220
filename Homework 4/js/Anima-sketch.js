@@ -70,7 +70,7 @@ function preload()
         ninja = new character(animations, 100,100);
         for(var i = 0; i < 5; i++)
         {
-            myJelly[i] = new Object(random(10,1400), random(10,700));
+            myJelly[i] = new myJelly(random(10,1400), random(10,700));
         }
         
         setInterval(incrementIndex, 50);
@@ -80,13 +80,13 @@ function preload()
     {
         background(120);
         image(animations[i], ninjaObj[i].getX(), ninjaObj[i].getY());
-        myJelly[i].draw();
         /*
         for(var i = 0; i < myJelly.length; i++)
         {
             myJelly[i].draw();
         }
-       */ 
+        */
+      console.log();
     }
 
     function incrementIndex()
