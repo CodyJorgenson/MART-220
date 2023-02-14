@@ -27,6 +27,27 @@ function preload()
         ninja = new animationIdle("assets/Idle__009.png", 0, 0);
         ninjaObj[9] = ninja;
 
+        ninja = new animationWalk("assets/Run__000.png", 0, 0);
+        ninjaObj[0] = ninja;
+        ninja = new animationWalk("assets/Run__001.png", 0, 0);
+        ninjaObj[1] = ninja;
+        ninja = new animationWalk("assets/Run__002.png", 0, 0);
+        ninjaObj[2] = ninja;
+        ninja = new animationWalk("assets/Run__003.png", 0, 0);
+        ninjaObj[3] = ninja;
+        ninja = new animationWalk("assets/Run__004.png", 0, 0);
+        ninjaObj[4] = ninja;
+        ninja = new animationWalk("assets/Run__005.png", 0, 0);
+        ninjaObj[5] = ninja;
+        ninja = new animationWalk("assets/Run__006.png", 0, 0);
+        ninjaObj[6] = ninja;
+        ninja = new animationWalk("assets/Run__007.png", 0, 0);
+        ninjaObj[7] = ninja;
+        ninja = new animationWalk("assets/Run__008.png", 0, 0);
+        ninjaObj[8] = ninja;
+        ninja = new animationWalk("assets/Run__009.png", 0, 0);
+        ninjaObj[9] = ninja;
+
         for (var i = 0; i < ninjaObj.length; i++) {
             animations[i] = ninjaObj[i].getImage();
         }
