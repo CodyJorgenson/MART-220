@@ -54,8 +54,8 @@ class JellyArray{
 
     getImage()
     {
-        var myJelly = loadImage(this.path);
-        return myJelly;
+        var jelly = loadImage(this.path);
+        return jelly;
     }
     getX()
     {
@@ -64,5 +64,8 @@ class JellyArray{
     getY()
     {
         return this.y;
+    }
+    draw(){
+        
     }
 }
