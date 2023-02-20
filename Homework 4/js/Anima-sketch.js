@@ -63,7 +63,7 @@ function preload()
         ninja = new animationWalk("assets/Run__009.png", 0, 0);
         ninjaObj[9] = ninjaWalk;
 
-
+/*
         jelly = new JellyArray("assets/Jelly (1).png", x2, y2);
         Jelly[0] = jelly;
         jelly = new JellyArray("assets/Jelly (2).png", x2, y2);
@@ -71,7 +71,7 @@ function preload()
         jelly = new JellyArray("assets/Jelly (3).png", x2, y2);
         Jelly[2] = jelly;
         console.log("broken");
-       
+  */     
 
         for (var i = 0; i < ninjaIdle.length; i++) 
         {
@@ -79,13 +79,12 @@ function preload()
 
             console.log("tex2");
         }
-
+/*
         for (var j = 0; j < Jelly.length; j++) 
         {
             animation2[j] = Jelly[j].getImage();
         }
-        
-        //img1 = loadImage("assets/Jelly (1).png");
+  */      
     }
 
     function setup() 
@@ -95,29 +94,39 @@ function preload()
         for(var i =0; i<ninja.length; i++)
         {
         ninja = new character(animations, 100,100);  
-        } */
+        }
 
         for(var j =0; j<Jelly.length; j++)
         {
         jelly = new character(animation2, x2,y2);
         }
-        
+        */
         setInterval(incrementIndex, 50);
+
+        for(var j=0; j<5; j++)
+        {
+            jelly = new JellyArray(random(10, width), random(690, length));
+            Jelly[j] = jelly;
+        }
     }
 
     function draw() 
     {
         background(120);
         image(animations[i], ninjaIdle[i].getX(), ninjaIdle[i].getY());
+        Jelly[j].drawJelly();
+
+
         //image(animation2[j], Jelly[j].getX(), Jelly[j].getY());
         
+        /*
         for(var j = 0; j < Jelly.length; j++)
         {
             console.log("jelly?");
             Jelly[j].drawJelly();
             
 
-        } 
+        } */
 
 
       //image(img1, random(10, 1330), random(10, 650));
