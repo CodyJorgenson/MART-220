@@ -45,27 +45,22 @@ class animationWalk{
     }
 }
 class JellyArray{
-    constructor(path, x, y)
+    constructor( x, y)
     {
-        this.path = path;
         this.x = x;
         this.y = y;
     }
 
-    getImage()
-    {
-        var jelly = loadImage(this.path);
-        return jelly;
-    }
-    getX()
-    {
-        return this.x;
-    }
-    getY()
-    {
-        return this.y;
-    }
-    draw(){
-        
+    drawJelly(x,y){
+        noStroke();
+        fill(200,110,5);
+        ellipse(this.x,this.y,80,60);
+        fill(200,50,0)
+        ellipse(this.x,this.y+15,60,20);
+        fill(200,190,190)
+        ellipse(this.x-10,this.y-20,20,10);
+        fill(200,190,190)
+        ellipse(this.x-15,this.y-10,10,3);
+
     }
 }
