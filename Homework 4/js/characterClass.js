@@ -3,14 +3,13 @@ class character
 {
         construction(animations, x, y)
         {
-            var idles = animations[0];
-            var walks = animations[1];
+            var Idles = animations[0];
+            var Walks = animations[1];
             this.Idle = new animationIdle;
-            this.Walk = new animationWalk;
+            this.Walk = new animationRun;
             this.x = x;
             this.y = y;
             this.frame = 0;
-            this.scale = [1, 1];
             this.walkSpeed = 7;
             this.CurrentAnimation = this.Idle;
             this.draw;
@@ -19,7 +18,7 @@ class character
     beats(){
         this.movement
         
-            if(this.isMoving){
+            if(this.moving){
                 this.CurrentAnimation = this.Walk;
             }
             else{
@@ -27,11 +26,12 @@ class character
             }
 
 
-        translate(this.x, this.y); 
+        translate(this.x, this.y);
+        scale(this.currentScale, 1);
+    }
+        
 
-        moving( keyIsDown(87) || keyIsDown(83) || keyIsDown(65) || keyIsDown(68));
-
-
+/*
     draw();
     {
         stroke(0);
@@ -40,7 +40,9 @@ class character
         ellipse(-3,45,40,15);
         this.CurrentAnimation.draw(0, 0, Math.floor(this.frame / this.animationSpeedFactor));
     }
-    movement()
+*/
+/*
+    movement(){
         if(keyIsDown(87)){
             this.y -= this.walkSpeed;
         }
@@ -51,7 +53,7 @@ class character
 
         if(keyIsDown(65)){
             this.x -= this.walkSpeed;
-            this.scale[0] = -1;
+            this.scale[i] = -1;
         }
 
         if(keyIsDown(68)){
@@ -69,7 +71,10 @@ class character
             }
 
         }
+        */
 }
+
+
         
     
     
