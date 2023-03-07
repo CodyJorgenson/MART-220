@@ -105,6 +105,14 @@ class animationRun{
     {
         return this.y;
     }
+    getW()
+    {
+        return this.w;
+    }
+    getH()
+    {
+        return this.h;
+    }
     getImage()
     {
         for(var i = 0; i < this.path.length; i++)
@@ -131,15 +139,6 @@ class animationRun{
         image(this.myImage[this.i], this.x, this.y, this.w, this.h);
     }
 }
-
-    getW()
-    {
-        return this.w;
-    }
-    getH()
-    {
-        return this.h;
-    }
 
     incrementIndex()
     {
@@ -171,45 +170,21 @@ class animationRun{
         this.y += 3;
     }
 }
-}
 
-class JellyArray{
-    constructor( x, y)
-    {
-        this.x = x;
-        this.y = y;
-    }
-
-    drawJelly(x,y){
-        noStroke();
-        fill(200,110,5);
-        ellipse(this.x,this.y,80,60);
-        fill(200,50,0)
-        ellipse(this.x,this.y+15,60,20);
-        fill(200,190,190)
-        ellipse(this.x-10,this.y-20,20,10);
-        fill(200,190,190)
-        ellipse(this.x-15,this.y-10,10,3);
-
-    }
-}
-
-isRectanglesColliding(rec2)
-    {
-        var topEdge1 = this.y + this.h;
-        var rightEdge1 = this.x + this.w; 
-        var leftEdge1 = this.x;
-        var bottomEdge1 = this.y;
-        var topEdge2 = rec2.getY() + rec2.getH();
-        var rightEdge2 = rec2.getX() + rec2.getW(); 
-        var leftEdge2 = rec2.getX();
-        var bottomEdge2 = rec2.getY();   
+isRectanglesColliding(rec2){
+    var topEdge1 = this.y + this.h;
+    var rightEdge1 = this.x + this.w; 
+    var leftEdge1 = this.x;
+    var bottomEdge1 = this.y;
+    var topEdge2 = rec2.getY() + rec2.getH();
+    var rightEdge2 = rec2.getX() + rec2.getW(); 
+    var leftEdge2 = rec2.getX();
+    var bottomEdge2 = rec2.getY();   
     
-    if( leftEdge1 < rightEdge2 && rightEdge1 > leftEdge2 && bottomEdge1 < topEdge2 && topEdge1 > bottomEdge2)
-    {
+    if( leftEdge1 < rightEdge2 && rightEdge1 > leftEdge2 && bottomEdge1 < topEdge2 && topEdge1 > bottomEdge2){
         return true; 
-    }
-    return false;
+   }
+   return false;
   }
 
   isJellyColliding(jellyCol){
@@ -227,3 +202,111 @@ isRectanglesColliding(rec2)
    }
    return false;
   }
+}
+
+class JellyArray{
+    constructor(x, y, w, h)
+    {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+    }
+    getX()
+    {
+      return this.x;
+    }
+    getY()
+    {
+      return this.y;
+    }
+    getW()
+    {
+      return this.w;
+    }
+    getH()
+    {
+      return this.h;
+    }
+
+    drawJelly(){
+        fill("none")
+        rect(this.x-40,this.y-30,80,60)
+        noStroke();
+        fill("white")
+        fill(200,110,5);
+        ellipse(this.x,this.y,80,60);
+        fill(200,50,0)
+        ellipse(this.x,this.y+15,60,20);
+        fill(200,190,190)
+        ellipse(this.x-10,this.y-20,20,10);
+        fill(200,190,190)
+        ellipse(this.x-15,this.y-10,10,3);
+        
+    }
+}
+class Rectangle
+{
+  
+  constructor(x,y,w,h)
+  {
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
+  }
+  
+  getX()
+  {
+    return this.x;
+  }
+  getY()
+  {
+    return this.y;
+  }
+  getW()
+  {
+    return this.w;
+  }
+  getH()
+  {
+    return this.h;
+  }
+  
+  draw()
+  {
+    rect(this.x, this.y, this.w, this.h);
+  }
+/*
+  isRectanglesColliding(rec2){
+    var topEdge1 = this.y + this.h;
+    var rightEdge1 = this.x + this.w; 
+    var leftEdge1 = this.x;
+    var bottomEdge1 = this.y;
+    var topEdge2 = rec2.getY() + rec2.getH();
+    var rightEdge2 = rec2.getX() + rec2.getW(); 
+    var leftEdge2 = rec2.getX();
+    var bottomEdge2 = rec2.getY();   
+    
+    if( leftEdge1 < rightEdge2 && rightEdge1 > leftEdge2 && bottomEdge1 < topEdge2 && topEdge1 > bottomEdge2){
+        return true; 
+   }
+   return false;
+  }
+
+  isJellyColliding(jelly){
+    var topEdge1 = this.y + this.h;
+    var rightEdge1 = this.x + this.w; 
+    var leftEdge1 = this.x;
+    var bottomEdge1 = this.y;
+    var topEdge2 = jelly.getY() + jelly.getH();
+    var rightEdge2 = jelly.getX() + jelly.getW(); 
+    var leftEdge2 = jelly.getX();
+    var bottomEdge2 = jelly.getY();   
+    
+    if( leftEdge1 < rightEdge2 && rightEdge1 > leftEdge2 && bottomEdge1 < topEdge2 && topEdge1 > bottomEdge2){
+        return true; 
+   }
+   return false;
+  }*/
+}
